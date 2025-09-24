@@ -1,154 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HePU: A Foundational Dataset</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: #f9f9f9;
-            color: #333;
-            text-align: center; /* Center everything by default */
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem;
-            background: #fff;
-        }
-        h1, h2, h3 {
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            color: #222;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem auto; /* Center table */
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 0.5rem;
-            text-align: center;
-        }
-        th {
-            background: #eee;
-        }
-        .authors, .affiliations {
-            margin-bottom: 1rem;
-        }
-        .abstract p {
-            text-align: left; /* Left-align abstract text */
-        }
-        .section {
-            margin-top: 2rem;
-        }
-        .subtitle {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 0.5rem;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HePU: A Foundational Dataset</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
+        text-align: center; /* Center everything */
+    }
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem;
+        background: #fff;
+    }
+    h1, h2, h3 {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        color: #222;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
+    a {
+        color: #0366d6;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem auto; /* Center table */
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    th {
+        background: #eee;
+    }
+    .authors, .affiliations {
+        margin-bottom: 1rem;
+    }
+    .abstract p {
+        text-align: left; /* Left-align abstract text */
+    }
+    .section {
+        margin-top: 2rem;
+    }
+    .subtitle {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Hero section buttons */
+    .hero {
+        margin: 2rem 0;
+    }
+    .publication-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .publication-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #333;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+    .publication-links a:hover {
+        background: #555;
+    }
+    .publication-links i {
+        font-size: 1rem;
+    }
+</style>
+<!-- FontAwesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>HePU: Hebrew Paleography Understanding Dataset For Semantic Script Segmentation</h1>
-        <h2>ICDAR2025-DALL (Oral): ICDAR 2025 Workshop on Documents Analysis of Low-resource Languages</h2>
+<div class="container">
+    <h1>HePU: Hebrew Paleography Understanding Dataset For Semantic Script Segmentation</h1>
+    <h2>ICDAR2025-DALL (Oral): ICDAR 2025 Workshop on Documents Analysis of Low-resource Languages</h2>
 
-        <div class="authors">
-            <p>
-                <a href="https://boraqmadi.example.com" target="_blank">Boraq Madi</a><sup>1</sup>, 
-                <a href="https://nouratamni.example.com" target="_blank">Nour Atamni</a><sup>2</sup>, 
-                <a href="https://islamamar.example.com" target="_blank">Islam Amar</a><sup>2</sup>, 
-                <a href="https://saidnaamneh.example.com" target="_blank">Said Naamneh</a><sup>2</sup>, 
-                <a href="https://raidsaabni.example.com" target="_blank">Raid Saabni</a><sup>1</sup> and 
-                <a href="https://jihadelsana.example.com" target="_blank">Jihad El-Sana</a><sup>2</sup>
-            </p>
+    <div class="authors">
+        <p>
+            <a href="https://boraqmadi.example.com" target="_blank">Boraq Madi</a><sup>1</sup>, 
+            <a href="https://nouratamni.example.com" target="_blank">Nour Atamni</a><sup>2</sup>, 
+            <a href="https://islamamar.example.com" target="_blank">Islam Amar</a><sup>2</sup>, 
+            <a href="https://saidnaamneh.example.com" target="_blank">Said Naamneh</a><sup>2</sup>, 
+            <a href="https://raidsaabni.example.com" target="_blank">Raid Saabni</a><sup>1</sup> and 
+            <a href="https://jihadelsana.example.com" target="_blank">Jihad El-Sana</a><sup>2</sup>
+        </p>
+    </div>
+    <div class="affiliations">
+        <p><sup>1</sup>The Academic College of Tel Aviv-Yaffo</p>
+        <p><sup>2</sup>Ben-Gurion University of the Negev, Beer-Sheva, Israel</p>
+    </div>
+
+    <h2>Abstract</h2>
+    <div class="abstract">
+        <p>
+            Historical Hebrew manuscripts present unique challenges in document analysis due to their diverse script styles, intricate layouts, and degraded conditions. This paper introduces a novel semantic segmentation approach for page layout analysis in medieval Hebrew manuscripts. Our method first applies binary segmentation to distinguish text from the background, followed by a script-type classifier based on U-Net architectures enhanced with ResNeXt and WideResNet backbones to achieve fine-grained semantic segmentation. We present a new dataset derived from the Sfardata codicological database, encompassing a wide range of Hebrew scripts across different historical periods. We evaluate our approach using U-Net and DeepLabv3+ models with multiple backbones, demonstrating its effectiveness in accurately segmenting complex page layouts. Experimental results highlight significant improvements compared to traditional methods. These contributions support the development of automated tools for historical Hebrew manuscript analysis, aiding preservation, accessibility, and paleographic research.
+        </p>
+    </div>
+
+    <!-- Hero button section -->
+    <section class="hero">
+        <div class="publication-links">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-032-04614-7_2#citeas" target="_blank">
+                <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a href="https://github.com/IndicDLP/IndicDLP.github.io/blob/main/supplementary.pdf" target="_blank">
+                <i class="fas fa-file-pdf"></i> Supplementary
+            </a>
+            <a href="https://github.com/IndicDLP/IndicDLP" target="_blank">
+                <i class="fab fa-github"></i> GitHub Repo
+            </a>
+            <a href="https://aikosh.indiaai.gov.in/home/datasets/details/indicdlp.html" target="_blank">
+                <i class="fas fa-download"></i> Download Dataset
+            </a>
+            <a href="https://huggingface.co/datasets/IndicDLP/IndicDLP-dataset" target="_blank">
+                <i class="fas fa-database"></i> HF Dataset
+            </a>
+            <a href="https://huggingface.co/IndicDLP/IndicDLP-model" target="_blank">
+                <i class="fas fa-robot"></i> HF Model
+            </a>
         </div>
-        <div class="affiliations">
-            <p><sup>1</sup>The Academic College of Tel Aviv-Yaffo</p>
-            <p><sup>2</sup>Ben-Gurion University of the Negev, Beer-Sheva, Israel</p>
-        </div>
+    </section>
 
-        <h2>Abstract</h2>
-        <div class="abstract">
-            <p>
-                Historical Hebrew manuscripts present unique challenges in document analysis due to their diverse script styles, intricate layouts, and degraded conditions. This paper introduces a novel semantic segmentation approach for page layout analysis in medieval Hebrew manuscripts. Our method first applies binary segmentation to distinguish text from the background, followed by a script-type classifier based on U-Net architectures enhanced with ResNeXt and WideResNet backbones to achieve fine-grained semantic segmentation. We present a new dataset derived from the Sfardata codicological database, encompassing a wide range of Hebrew scripts across different historical periods. We evaluate our approach using U-Net and DeepLabv3+ models with multiple backbones, demonstrating its effectiveness in accurately segmenting complex page layouts. Experimental results highlight significant improvements compared to traditional methods. These contributions support the development of automated tools for historical Hebrew manuscript analysis, aiding preservation, accessibility, and paleographic research.
-            </p>
-        </div>
+    <h2>Comparison with Other Datasets</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Dataset</th>
+                <th>#Images</th>
+                <th>#Region Classes</th>
+                <th>Annotation Method</th>
+                <th>#Domains</th>
+                <th>#Languages</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PRImA</td><td>1,240</td><td>10</td><td>Automatic</td><td>5</td><td>1</td>
+            </tr>
+            <tr>
+                <td>PubLayNet</td><td>360,000</td><td>5</td><td>Automatic</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>DocBank</td><td>500,000</td><td>13</td><td>Automatic</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>DocLayNet</td><td>80,863</td><td>11</td><td>Manual</td><td>6</td><td>4</td>
+            </tr>
+            <tr>
+                <td>M<sup>6</sup>Doc</td><td>9,080</td><td>75</td><td>Manual</td><td>7</td><td>2</td>
+            </tr>
+            <tr>
+                <td>D<sup>4</sup>LA</td><td>11,092</td><td>27</td><td>Manual</td><td>12</td><td>1</td>
+            </tr>
+            <tr>
+                <td>BaDLAD</td><td>33,695</td><td>4</td><td>Manual</td><td>6</td><td>1</td>
+            </tr>
+            <tr>
+                <td><strong>IndicDLP (Ours)</strong></td><td><strong>119,806</strong></td><td><strong>42</strong></td><td><strong>Manual</strong></td><td><strong>12</strong></td><td><strong>12</strong></td>
+            </tr>
+        </tbody>
+    </table>
 
-        <h2>Links</h2>
-        <ul>
-            <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-04614-7_2#citeas" target="_blank">Paper (PDF)</a></li>
-            <li><a href="https://github.com/IndicDLP/IndicDLP.github.io/blob/main/supplementary.pdf" target="_blank">Supplementary (PDF)</a></li>
-            <li><a href="https://github.com/IndicDLP/IndicDLP" target="_blank">GitHub Repo</a></li>
-            <li><a href="https://aikosh.indiaai.gov.in/home/datasets/details/indicdlp.html" target="_blank">Download Dataset</a></li>
-            <li><a href="https://huggingface.co/datasets/IndicDLP/IndicDLP-dataset" target="_blank">HuggingFace Dataset</a></li>
-            <li><a href="https://huggingface.co/IndicDLP/IndicDLP-model" target="_blank">HuggingFace Model</a></li>
-        </ul>
-
-        <h2>Comparison with Other Datasets</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Dataset</th>
-                    <th>#Images</th>
-                    <th>#Region Classes</th>
-                    <th>Annotation Method</th>
-                    <th>#Domains</th>
-                    <th>#Languages</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>PRImA</td><td>1,240</td><td>10</td><td>Automatic</td><td>5</td><td>1</td>
-                </tr>
-                <tr>
-                    <td>PubLayNet</td><td>360,000</td><td>5</td><td>Automatic</td><td>1</td><td>1</td>
-                </tr>
-                <tr>
-                    <td>DocBank</td><td>500,000</td><td>13</td><td>Automatic</td><td>1</td><td>1</td>
-                </tr>
-                <tr>
-                    <td>DocLayNet</td><td>80,863</td><td>11</td><td>Manual</td><td>6</td><td>4</td>
-                </tr>
-                <tr>
-                    <td>M<sup>6</sup>Doc</td><td>9,080</td><td>75</td><td>Manual</td><td>7</td><td>2</td>
-                </tr>
-                <tr>
-                    <td>D<sup>4</sup>LA</td><td>11,092</td><td>27</td><td>Manual</td><td>12</td><td>1</td>
-                </tr>
-                <tr>
-                    <td>BaDLAD</td><td>33,695</td><td>4</td><td>Manual</td><td>6</td><td>1</td>
-                </tr>
-                <tr>
-                    <td><strong>IndicDLP (Ours)</strong></td><td><strong>119,806</strong></td><td><strong>42</strong></td><td><strong>Manual</strong></td><td><strong>12</strong></td><td><strong>12</strong></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>Citation</h2>
-        <pre>
+    <h2>Citation</h2>
+    <pre>
 @InProceedings{10.1007/978-3-032-04614-7_2,
 author="Nath, Oikantik and Kukkala, Sahithi and Khapra, Mitesh and Sarvadevabhatla, Ravi Kiran",
 title="IndicDLP: A Foundational Dataset for Multi-lingual and Multi-domain Document Layout Parsing",
@@ -157,12 +203,12 @@ year="2026",
 publisher="Springer Nature Switzerland",
 pages="23--39"
 }
-        </pre>
+    </pre>
 
-        <h2>Acknowledgements</h2>
-        <p>
-            We would like to acknowledge the support from Indian Institute of Technology, Madras, India and International Institute of Information Technology Hyderabad, India.
-        </p>
-    </div>
+    <h2>Acknowledgements</h2>
+    <p>
+        We would like to acknowledge the support from Indian Institute of Technology, Madras, India and International Institute of Information Technology Hyderabad, India.
+    </p>
+</div>
 </body>
 </html>
