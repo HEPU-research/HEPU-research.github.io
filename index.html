@@ -12,7 +12,7 @@
             padding: 0;
             background: #f9f9f9;
             color: #333;
-            text-align: center; /* Center everything */
+            text-align: center; /* Center everything by default */
         }
         .container {
             max-width: 1000px;
@@ -51,6 +51,9 @@
         .authors, .affiliations {
             margin-bottom: 1rem;
         }
+        .abstract p {
+            text-align: left; /* Left-align abstract text */
+        }
         .section {
             margin-top: 2rem;
         }
@@ -88,9 +91,11 @@
         </div>
 
         <h2>Abstract</h2>
-        <p>
-            Historical Hebrew manuscripts present unique challenges in document analysis due to their diverse script styles, intricate layouts, and degraded conditions. This paper introduces a novel semantic segmentation approach for page layout analysis in medieval Hebrew manuscripts. Our method first applies binary segmentation to distinguish text from the background, followed by a script-type classifier based on U-Net architectures enhanced with ResNeXt and WideResNet backbones to achieve fine-grained semantic segmentation. We present a new dataset derived from the Sfardata codicological database, encompassing a wide range of Hebrew scripts across different historical periods. We evaluate our approach using U-Net and DeepLabv3+ models with multiple backbones, demonstrating its effectiveness in accurately segmenting complex page layouts. Experimental results highlight significant improvements compared to traditional methods. These contributions support the development of automated tools for historical Hebrew manuscript analysis, aiding preservation, accessibility, and paleographic research.
-        </p>
+        <div class="abstract">
+            <p>
+                Historical Hebrew manuscripts present unique challenges in document analysis due to their diverse script styles, intricate layouts, and degraded conditions. This paper introduces a novel semantic segmentation approach for page layout analysis in medieval Hebrew manuscripts. Our method first applies binary segmentation to distinguish text from the background, followed by a script-type classifier based on U-Net architectures enhanced with ResNeXt and WideResNet backbones to achieve fine-grained semantic segmentation. We present a new dataset derived from the Sfardata codicological database, encompassing a wide range of Hebrew scripts across different historical periods. We evaluate our approach using U-Net and DeepLabv3+ models with multiple backbones, demonstrating its effectiveness in accurately segmenting complex page layouts. Experimental results highlight significant improvements compared to traditional methods. These contributions support the development of automated tools for historical Hebrew manuscript analysis, aiding preservation, accessibility, and paleographic research.
+            </p>
+        </div>
 
         <h2>Links</h2>
         <ul>
